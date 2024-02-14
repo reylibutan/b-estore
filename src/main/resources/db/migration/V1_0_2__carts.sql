@@ -1,0 +1,20 @@
+CREATE TABLE CARTS
+(
+    ID IDENTITY PRIMARY KEY
+    -- we can add the USER_ID here later
+    -- for now, we only assume there's one cart (since there's no authentication yet)
+);
+
+INSERT INTO CARTS VALUES (1);
+
+CREATE TABLE CART_ITEMS
+(
+    CART_ID BIGINT NOT NULL,
+    PRODUCT_ID BIGINT NOT NULL,
+    QUANTITY INT NOT NULL,
+    PRIMARY KEY (CART_ID, PRODUCT_ID),
+    FOREIGN KEY (CART_ID) REFERENCES CARTS,
+    FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS
+);
+
+INSERT INTO CART_ITEMS VALUES (1, 1, 5);

@@ -40,3 +40,8 @@ preferred.)
 Any further questions, please feel free to contact us for clarification.
 HINT: If you do well in the assignment then your next round will be based on adding
 features to it, so design your application to be easy to extend.
+
+# TODO (😔 sorry ran out of time, started late due to holidays 😔)
+* test core classes 
+* test Controllers
+* test Repo?
